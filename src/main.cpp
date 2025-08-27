@@ -1,24 +1,23 @@
-#include <raylib.h>
-int main()
-{
-    // Initialize the window
-    InitWindow(800, 450, "Hello raylib!"); // width, height, title
+#include "raylib.h"
+#include "game.h"
 
-    // Set the target frames per second (optional, but good practice)
-    SetTargetFPS(30);
+int main() {
+    const int screenWidth  = 500;
+    const int screenHeight = 620;
 
-    // Main game loop
-    while (!WindowShouldClose()) // Loop until the window is closed
-    {
-        // Drawing
-        BeginDrawing(); // Start drawing operations
-        ClearBackground(RAYWHITE); // Clear the background with a color
-        DrawText("Hello World!", 190, 200, 20, BLACK); // Draw text on screen
-        EndDrawing(); // End drawing operations
+    InitWindow(screenWidth, screenHeight, "Tetris");
+    SetTargetFPS(60);
+
+    Game game;
+
+    while (!WindowShouldClose()) {
+        game.Update();
+        BeginDrawing();
+        ClearBackground(DARKGRAY);
+        game.Draw();
+        EndDrawing();
     }
 
-    // Close the window and unload resources
     CloseWindow();
-
     return 0;
 }
