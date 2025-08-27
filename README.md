@@ -5,3 +5,5 @@ A simple Tetris game created in C++ and raylib, demonstrating core game developm
 cmake -S . -B build -DCMAKE_PREFIX_PATH="$(brew --prefix raylib)"                                                                main
 cmake --build build
 ./build/tetris-game
+
+# building with Dockers (Recommended)
