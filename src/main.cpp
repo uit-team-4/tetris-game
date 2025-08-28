@@ -8,13 +8,13 @@ int main() {
     InitWindow(screenWidth, screenHeight, "Tetris");
     SetTargetFPS(60);
 
-    Game game;
+    // Game game;
 
     while (!WindowShouldClose()) {
-        game.Update();
+        // game.Update();
         BeginDrawing();
         ClearBackground(DARKGRAY);
-        game.Draw();
+        // game.Draw();
         EndDrawing();
     }
 

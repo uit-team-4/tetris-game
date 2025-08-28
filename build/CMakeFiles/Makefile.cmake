@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/Users/hienvu080791/code/c++/tetris-game/CMakeLists.txt"
+  "/Users/hienvu080791/CLionProjects/tetris-game/CMakeLists.txt"
   "CMakeFiles/4.1.0/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.1.0/CMakeSystem.cmake"
   "/opt/homebrew/opt/raylib/lib/cmake/raylib/raylib-config-version.cmake"
