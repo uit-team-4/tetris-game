@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/hienvu080791/code/c++/tetris-game
+CMAKE_SOURCE_DIR = /Users/hienvu080791/CLionProjects/tetris-game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/hienvu080791/code/c++/tetris-game/build
+CMAKE_BINARY_DIR = /Users/hienvu080791/CLionProjects/tetris-game/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/tetris-game.dir/depend.make
@@ -73,32 +73,32 @@ CMakeFiles/tetris-game.dir/codegen:
 .PHONY : CMakeFiles/tetris-game.dir/codegen
 
 CMakeFiles/tetris-game.dir/src/main.cpp.o: CMakeFiles/tetris-game.dir/flags.make
-CMakeFiles/tetris-game.dir/src/main.cpp.o: /Users/hienvu080791/code/c++/tetris-game/src/main.cpp
+CMakeFiles/tetris-game.dir/src/main.cpp.o: /Users/hienvu080791/CLionProjects/tetris-game/src/main.cpp
 CMakeFiles/tetris-game.dir/src/main.cpp.o: CMakeFiles/tetris-game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hienvu080791/code/c++/tetris-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tetris-game.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tetris-game.dir/src/main.cpp.o -MF CMakeFiles/tetris-game.dir/src/main.cpp.o.d -o CMakeFiles/tetris-game.dir/src/main.cpp.o -c /Users/hienvu080791/code/c++/tetris-game/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hienvu080791/CLionProjects/tetris-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tetris-game.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tetris-game.dir/src/main.cpp.o -MF CMakeFiles/tetris-game.dir/src/main.cpp.o.d -o CMakeFiles/tetris-game.dir/src/main.cpp.o -c /Users/hienvu080791/CLionProjects/tetris-game/src/main.cpp
 
 CMakeFiles/tetris-game.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tetris-game.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hienvu080791/code/c++/tetris-game/src/main.cpp > CMakeFiles/tetris-game.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hienvu080791/CLionProjects/tetris-game/src/main.cpp > CMakeFiles/tetris-game.dir/src/main.cpp.i
 
 CMakeFiles/tetris-game.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tetris-game.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hienvu080791/code/c++/tetris-game/src/main.cpp -o CMakeFiles/tetris-game.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hienvu080791/CLionProjects/tetris-game/src/main.cpp -o CMakeFiles/tetris-game.dir/src/main.cpp.s
 
 CMakeFiles/tetris-game.dir/src/grid.cpp.o: CMakeFiles/tetris-game.dir/flags.make
-CMakeFiles/tetris-game.dir/src/grid.cpp.o: /Users/hienvu080791/code/c++/tetris-game/src/grid.cpp
+CMakeFiles/tetris-game.dir/src/grid.cpp.o: /Users/hienvu080791/CLionProjects/tetris-game/src/grid.cpp
 CMakeFiles/tetris-game.dir/src/grid.cpp.o: CMakeFiles/tetris-game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hienvu080791/code/c++/tetris-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tetris-game.dir/src/grid.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tetris-game.dir/src/grid.cpp.o -MF CMakeFiles/tetris-game.dir/src/grid.cpp.o.d -o CMakeFiles/tetris-game.dir/src/grid.cpp.o -c /Users/hienvu080791/code/c++/tetris-game/src/grid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hienvu080791/CLionProjects/tetris-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tetris-game.dir/src/grid.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tetris-game.dir/src/grid.cpp.o -MF CMakeFiles/tetris-game.dir/src/grid.cpp.o.d -o CMakeFiles/tetris-game.dir/src/grid.cpp.o -c /Users/hienvu080791/CLionProjects/tetris-game/src/grid.cpp
 
 CMakeFiles/tetris-game.dir/src/grid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tetris-game.dir/src/grid.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hienvu080791/code/c++/tetris-game/src/grid.cpp > CMakeFiles/tetris-game.dir/src/grid.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hienvu080791/CLionProjects/tetris-game/src/grid.cpp > CMakeFiles/tetris-game.dir/src/grid.cpp.i
 
 CMakeFiles/tetris-game.dir/src/grid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tetris-game.dir/src/grid.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hienvu080791/code/c++/tetris-game/src/grid.cpp -o CMakeFiles/tetris-game.dir/src/grid.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hienvu080791/CLionProjects/tetris-game/src/grid.cpp -o CMakeFiles/tetris-game.dir/src/grid.cpp.s
 
 # Object files for target tetris-game
 tetris__game_OBJECTS = \
@@ -113,7 +113,7 @@ tetris-game: CMakeFiles/tetris-game.dir/src/grid.cpp.o
 tetris-game: CMakeFiles/tetris-game.dir/build.make
 tetris-game: /opt/homebrew/opt/raylib/lib/libraylib.dylib
 tetris-game: CMakeFiles/tetris-game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/hienvu080791/code/c++/tetris-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable tetris-game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/hienvu080791/CLionProjects/tetris-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable tetris-game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tetris-game.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -125,6 +125,6 @@ CMakeFiles/tetris-game.dir/clean:
 .PHONY : CMakeFiles/tetris-game.dir/clean
 
 CMakeFiles/tetris-game.dir/depend:
-	cd /Users/hienvu080791/code/c++/tetris-game/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/hienvu080791/code/c++/tetris-game /Users/hienvu080791/code/c++/tetris-game /Users/hienvu080791/code/c++/tetris-game/build /Users/hienvu080791/code/c++/tetris-game/build /Users/hienvu080791/code/c++/tetris-game/build/CMakeFiles/tetris-game.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/hienvu080791/CLionProjects/tetris-game/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/hienvu080791/CLionProjects/tetris-game /Users/hienvu080791/CLionProjects/tetris-game /Users/hienvu080791/CLionProjects/tetris-game/build /Users/hienvu080791/CLionProjects/tetris-game/build /Users/hienvu080791/CLionProjects/tetris-game/build/CMakeFiles/tetris-game.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/tetris-game.dir/depend
 

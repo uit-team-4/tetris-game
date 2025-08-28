@@ -1,3 +1,3 @@
-/Users/hienvu080791/code/c++/tetris-game/build/CMakeFiles/tetris-game.dir
-/Users/hienvu080791/code/c++/tetris-game/build/CMakeFiles/edit_cache.dir
-/Users/hienvu080791/code/c++/tetris-game/build/CMakeFiles/rebuild_cache.dir
+/Users/hienvu080791/CLionProjects/tetris-game/build/CMakeFiles/tetris-game.dir
+/Users/hienvu080791/CLionProjects/tetris-game/build/CMakeFiles/edit_cache.dir
+/Users/hienvu080791/CLionProjects/tetris-game/build/CMakeFiles/rebuild_cache.dir
