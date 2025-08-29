@@ -39,4 +39,9 @@ public:
   IShape();
 };
 
+class TShape : public Piece {
+public:
+  TShape();
+};
+
 #endif // TETRIS_GAME_PIECE_H
