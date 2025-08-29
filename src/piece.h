@@ -1,18 +1,32 @@
 //
 // Created by Hiền on 27/8/25.
 //
-
 #ifndef TETRIS_GAME_PIECE_H
 #define TETRIS_GAME_PIECE_H
+#include "map"
+#include "vector"
+
+using namespace std;
+
+struct Cell {
+  int row;
+  int col;
+};
 
 class Piece {
 public:
-  int row{0};
-  int col{0};
+  int id;
+  map<int, vector<Cell>> cells;
 
 private:
-  int id_{0};
-  int rotation_{0};
+  int row;
+  int col;
+  int rotation;
+};
+
+class LShape : public Piece {
+public:
+  LShape();
 };
 
 #endif // TETRIS_GAME_PIECE_H
