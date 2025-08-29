@@ -29,4 +29,9 @@ public:
   LShape();
 };
 
+class JShape : public Piece {
+public:
+  JShape();
+};
+
 #endif // TETRIS_GAME_PIECE_H
