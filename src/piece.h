@@ -54,4 +54,9 @@ public:
   SShape();
 };
 
+class OShape : public Piece {
+public:
+  OShape();
+};
+
 #endif // TETRIS_GAME_PIECE_H
