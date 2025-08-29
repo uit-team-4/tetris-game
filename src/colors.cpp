@@ -1,4 +1,5 @@
-#include "colors.h"
+#include "raylib.h"
+#include "vector"
 
 // Color definitions for Tetris blocks
 const Color darkGrey = {26, 31, 40, 255};
