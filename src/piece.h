@@ -49,4 +49,9 @@ public:
   ZShape();
 };
 
+class SShape : public Piece {
+public:
+  SShape();
+};
+
 #endif // TETRIS_GAME_PIECE_H

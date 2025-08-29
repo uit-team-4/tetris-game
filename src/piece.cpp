@@ -43,3 +43,11 @@ ZShape::ZShape() {
   cells[2] = {{0, 0}, {0, 1}, {1, 1}, {1, 2}}; // rotation 2
   cells[3] = {{0, 1}, {1, 0}, {1, 1}, {2, 0}}; // rotation 3
 }
+
+SShape::SShape() {
+  id = 6;
+  cells[0] = {{0, 1}, {0, 2}, {1, 0}, {1, 1}}; // rotation 0
+  cells[1] = {{0, 0}, {1, 0}, {1, 1}, {2, 1}}; // rotation 1
+  cells[2] = {{0, 1}, {0, 2}, {1, 0}, {1, 1}}; // rotation 2
+  cells[3] = {{0, 0}, {1, 0}, {1, 1}, {2, 1}}; // rotation 3
+}
