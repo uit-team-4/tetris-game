@@ -4,6 +4,30 @@
 
 #include "piece.h"
 
+Piece Piece::GetRandomPiece() {
+
+  // Generate random number 0-6 for 7 different pieces
+
+  switch (rand() % 7) {
+  case 0:
+    return LShape();
+  case 1:
+    return SShape();
+  case 2:
+    return TShape();
+  case 3:
+    return IShape();
+  case 4:
+    return OShape();
+  case 5:
+    return JShape();
+  case 6:
+    return ZShape();
+  default:
+    return LShape(); // fallback
+  }
+}
+
 LShape::LShape() {
   id = 1;
   cells[0] = {{0, 0}, {1, 0}, {2, 0}, {2, 1}}; // rotation 0

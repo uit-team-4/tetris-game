@@ -17,6 +17,7 @@ class Piece {
 public:
   int id;
   map<int, vector<Position>> cells;
+  static Piece GetRandomPiece();
 
 private:
   int row;
