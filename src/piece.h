@@ -8,7 +8,7 @@
 
 using namespace std;
 
-struct Cell {
+struct Position {
   int row;
   int col;
 };
@@ -16,7 +16,7 @@ struct Cell {
 class Piece {
 public:
   int id;
-  map<int, vector<Cell>> cells;
+  map<int, vector<Position>> cells;
 
 private:
   int row;
