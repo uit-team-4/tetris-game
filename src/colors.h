@@ -1,5 +1,6 @@
 #pragma once
-#include <vector>
+#include "raylib.h"
+#include "vector"
 
 // Color definitions for Tetris blocks
 extern const Color darkGrey;
