@@ -1,2 +1,4 @@
 *.build
 .idea
+main.exe
+game.exe

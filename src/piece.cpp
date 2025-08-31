@@ -3,7 +3,7 @@
 //
 
 #include "piece.h"
-
+#include <cstdlib>
 Piece Piece::GetRandomPiece() {
 
   // Generate random number 0-6 for 7 different pieces
