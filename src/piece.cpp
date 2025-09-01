@@ -4,6 +4,14 @@
 
 #include "piece.h"
 #include <cstdlib>
+
+// init Piece
+Piece::Piece() {
+  rotation = 0;
+  rowOffset = 0;
+  columnOffset = 0;
+}
+
 Piece Piece::GetRandomPiece() {
 
   // Generate random number 0-6 for 7 different pieces
@@ -27,6 +35,8 @@ Piece Piece::GetRandomPiece() {
     return LShape(); // fallback
   }
 }
+
+void Piece::Rotate() { rotation = (rotation + 1) % 4; }
 
 LShape::LShape() {
   id = 1;
