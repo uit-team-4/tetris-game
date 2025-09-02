@@ -4,5 +4,15 @@
 
 #ifndef TETRIS_GAME_GAME_H
 #define TETRIS_GAME_GAME_H
+#include "grid.h"
 
-#endif //TETRIS_GAME_GAME_H
+class Game {
+public:
+  Game();
+  void Draw();
+
+private:
+  Grid grid;
+};
+
+#endif // TETRIS_GAME_GAME_H
