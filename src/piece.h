@@ -17,9 +17,11 @@ class Piece {
 public:
   Piece();
   int id;
+  int cellSize;
   map<int, vector<Position>> cells;
   static Piece GetRandomPiece();
   void Rotate();
+  void Draw(int offsetX, int offsetY);
 
 private:
   int row;

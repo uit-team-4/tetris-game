@@ -3,10 +3,12 @@
 //
 
 #include "piece.h"
+#include "colors.h"
 #include <cstdlib>
 
 // init Piece
 Piece::Piece() {
+  cellSize = 30;
   rotation = 0;
   rowOffset = 0;
   columnOffset = 0;
@@ -37,6 +39,15 @@ Piece Piece::GetRandomPiece() {
 }
 
 void Piece::Rotate() { rotation = (rotation + 1) % 4; }
+
+void Piece::Draw(int offsetX, int offsetY) {
+  for (int row = 0; row < 4; row++) {
+    for (int col = 0; col < 4; col++) {
+      DrawRectangle(offsetX + col * cellSize, offsetY + row * cellSize,
+                    cellSize - 1, cellSize - 1, darkGrey);
+    }
+  }
+}
 
 LShape::LShape() {
   id = 1;
