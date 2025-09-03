@@ -24,6 +24,7 @@ RUN apt update && apt install -y \
 
 # Download and build raylib from source
 WORKDIR /tmp
+
 RUN git clone --depth 1 --branch 5.0 https://github.com/raysan5/raylib.git && \
     cd raylib && \
     mkdir build && \
@@ -33,3 +34,11 @@ RUN git clone --depth 1 --branch 5.0 https://github.com/raysan5/raylib.git && \
     make install && \
     cd / && \
     rm -rf /tmp/raylib
+
+# Clone the tetris repository
+RUN git clone https://github.com/uit-team-4/tetris-game.git && \
+    cd tetris-game && \
+    make
+
+# Run the game
+CMD ["./tetris-game"]
