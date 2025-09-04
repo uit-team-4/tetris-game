@@ -26,6 +26,7 @@ public:
   void MoveRight();
   void MoveDown();
   void Draw(int offsetX, int offsetY);
+  std::vector<Position> GetCellPositions();
 
 private:
   int row;

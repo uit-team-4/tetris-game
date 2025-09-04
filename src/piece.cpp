@@ -61,6 +61,16 @@ void Piece::Draw(int offsetX, int offsetY) {
   }
 }
 
+std::vector<Position> Piece::GetCellPositions() {
+  std::vector<Position> tiles = cells[rotation];
+  std::vector<Position> movedTiles;
+  for (Position item : tiles) {
+    Position newPos{item.row + rowOffset, item.col + columnOffset};
+    movedTiles.push_back(newPos);
+  }
+  return movedTiles;
+}
+
 LShape::LShape() {
   id = 1;
   cells[0] = {{0, 0}, {1, 0}, {2, 0}, {2, 1}}; // rotation 0
