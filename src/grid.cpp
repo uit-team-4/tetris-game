@@ -26,3 +26,7 @@ void Grid::Draw() {
     }
   }
 }
+
+bool Grid::IsCellOutside(int row, int column) {
+  return row < 0 || row >= numRows || column < 0 || column >= numCols;
+}

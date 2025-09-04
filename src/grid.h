@@ -8,6 +8,7 @@ public:
   void Initialize();
   void Draw();
   int grid[20][10]{};
+  bool IsCellOutside(int row, int column);
 
 private:
   int numRows;
