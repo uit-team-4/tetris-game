@@ -21,6 +21,10 @@ public:
   map<int, vector<Position>> cells;
   static Piece GetRandomPiece();
   void Rotate();
+  void Move(int row, int col);
+  void MoveLeft();
+  void MoveRight();
+  void MoveDown();
   void Draw(int offsetX, int offsetY);
 
 private:

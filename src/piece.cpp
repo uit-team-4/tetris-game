@@ -12,6 +12,7 @@ Piece::Piece() {
   rotation = 0;
   rowOffset = 0;
   columnOffset = 0;
+  Move(0, 1);
 }
 
 Piece Piece::GetRandomPiece() {
@@ -39,6 +40,17 @@ Piece Piece::GetRandomPiece() {
 }
 
 void Piece::Rotate() { rotation = (rotation + 1) % 4; }
+
+void Piece::Move(int row, int col) {
+  rowOffset += row;
+  columnOffset += col;
+}
+
+void Piece::MoveLeft() { Move(0, -1); }
+
+void Piece::MoveRight() { Move(0, 1); }
+
+void Piece::MoveDown() { Move(1, 0); }
 
 void Piece::Draw(int offsetX, int offsetY) {
   for (int row = 0; row < 4; row++) {
