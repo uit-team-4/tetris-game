@@ -12,6 +12,7 @@ public:
   Game();
   void Draw();
   bool IsValidPosition();
+  void Update();
 
 private:
   Grid grid;
