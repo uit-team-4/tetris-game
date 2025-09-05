@@ -15,14 +15,25 @@ struct Position {
 
 class Piece {
 public:
+  Piece();
   int id;
+  int cellSize;
   map<int, vector<Position>> cells;
   static Piece GetRandomPiece();
+  void Rotate();
+  void Move(int row, int col);
+  void MoveLeft();
+  void MoveRight();
+  void MoveDown();
+  void Draw(int offsetX, int offsetY);
+  std::vector<Position> GetCellPositions();
 
 private:
   int row;
   int col;
   int rotation;
+  int rowOffset;
+  int columnOffset;
 };
 
 class LShape : public Piece {

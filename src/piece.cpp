@@ -3,7 +3,18 @@
 //
 
 #include "piece.h"
+#include "colors.h"
 #include <cstdlib>
+
+// init Piece
+Piece::Piece() {
+  cellSize = 30;
+  rotation = 0;
+  rowOffset = 0;
+  columnOffset = 0;
+  Move(0, 1);
+}
+
 Piece Piece::GetRandomPiece() {
 
   // Generate random number 0-6 for 7 different pieces
@@ -26,6 +37,38 @@ Piece Piece::GetRandomPiece() {
   default:
     return LShape(); // fallback
   }
+}
+
+void Piece::Rotate() { rotation = (rotation + 1) % 4; }
+
+void Piece::Move(int row, int col) {
+  rowOffset += row;
+  columnOffset += col;
+}
+
+void Piece::MoveLeft() { Move(0, -1); }
+
+void Piece::MoveRight() { Move(0, 1); }
+
+void Piece::MoveDown() { Move(1, 0); }
+
+void Piece::Draw(int offsetX, int offsetY) {
+  for (int row = 0; row < 4; row++) {
+    for (int col = 0; col < 4; col++) {
+      DrawRectangle(offsetX + col * cellSize, offsetY + row * cellSize,
+                    cellSize - 1, cellSize - 1, darkGrey);
+    }
+  }
+}
+
+std::vector<Position> Piece::GetCellPositions() {
+  std::vector<Position> tiles = cells[rotation];
+  std::vector<Position> movedTiles;
+  for (Position item : tiles) {
+    Position newPos{item.row + rowOffset, item.col + columnOffset};
+    movedTiles.push_back(newPos);
+  }
+  return movedTiles;
 }
 
 LShape::LShape() {

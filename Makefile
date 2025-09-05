@@ -370,7 +370,7 @@ OBJ_DIR = obj
 # Define all object files from source files
 SRC = $(call rwildcard, *.cpp, *.h)
 #OBJS = $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
-OBJS ?= $(SRC_DIR)/main.cpp $(SRC_DIR)/grid.cpp $(SRC_DIR)/colors.cpp
+OBJS ?= $(SRC_DIR)/main.cpp $(SRC_DIR)/grid.cpp $(SRC_DIR)/colors.cpp $(SRC_DIR)/game.cpp $(SRC_DIR)/piece.cpp
 
 # For Android platform we call a custom Makefile.Android
 ifeq ($(PLATFORM),PLATFORM_ANDROID)
