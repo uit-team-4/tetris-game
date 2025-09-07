@@ -57,6 +57,7 @@ void Game::Update() {
 }
 
 void Game::Draw(Font font) {
+  // 1. Vẽ các thành phần game như bình thường
   grid.Draw(font, score);
   currentPiece.Draw(11, 11);
 
@@ -71,25 +72,41 @@ void Game::Draw(Font font) {
             nextPiece.Draw(300, 270);
             break;
     }
+
+  // 2. Nếu game over, vẽ màn hình kết thúc với lớp phủ toàn bộ game
   if(gameOver){
-      DrawRectangle(11, 11, 300, 600, Fade(BLACK, 0.7f));
+      // [THAY ĐỔI ĐẦU TIÊN]: Vẽ lớp phủ màu đen mờ bao phủ TOÀN BỘ VÙNG GAME (500x620)
+      // Chú ý: vùng game màu xám của bạn có tọa độ (0,0) và kích thước (500,620)
+      DrawRectangle(0, 0, 500, 620, Fade(BLACK, 0.7f)); // Rộng 500, Cao 620, bắt đầu từ (0,0)
+
+      // --- Tính toán tọa độ X để căn giữa trên TOÀN BỘ VÙNG GAME 500px ---
+      // Khu vực căn giữa giờ là toàn bộ vùng game rộng 500px.
+      // Công thức căn giữa: (500 - chiều_rộng_chữ) / 2
+
+      // --- Vẽ chữ "GAME OVER" ---
       const char* gameOverText = "GAME OVER";
       Vector2 gameOverSize = MeasureTextEx(font, gameOverText, 40, 2);
-      float gameOverX = 11 + (300 - gameOverSize.x) / 2;
+      float gameOverX = (500 - gameOverSize.x) / 2; // Căn giữa trên 500px
       DrawTextEx(font, gameOverText, {gameOverX, 180}, 40, 2, RED);
+
+      // --- Vẽ tiêu đề "High Scores" ---
       const char* hsTitleText = "High Scores";
       Vector2 hsTitleSize = MeasureTextEx(font, hsTitleText, 32, 2);
-      float hsTitleX = 11 + (300 - hsTitleSize.x) / 2;
+      float hsTitleX = (500 - hsTitleSize.x) / 2; // Căn giữa trên 500px
       DrawTextEx(font, hsTitleText, {hsTitleX, 250}, 32, 2, WHITE);
+
+      // --- Vẽ danh sách điểm cao ---
       for (size_t i = 0; i < highScores.size(); ++i) {
           const char* scoreText = TextFormat("%d. %d", i + 1, highScores[i]);
           Vector2 scoreSize = MeasureTextEx(font, scoreText, 28, 2);
-          float scoreX = 11 + (300 - scoreSize.x) / 2;
+          float scoreX = (500 - scoreSize.x) / 2; // Căn giữa trên 500px
           DrawTextEx(font, scoreText, {scoreX, 300 + (float)i * 40}, 28, 2, LIGHTGRAY);
       }
+
+      // --- Vẽ hướng dẫn chơi lại ---
       const char* restartText = "Press ENTER to restart";
       Vector2 restartSize = MeasureTextEx(font, restartText, 20, 2);
-      float restartX = 11 + (300 - restartSize.x) / 2;
+      float restartX = (500 - restartSize.x) / 2; // Căn giữa trên 500px
       DrawTextEx(font, restartText, {restartX, 520}, 20, 2, LIGHTGRAY);
   }
 }
