@@ -40,10 +40,10 @@ void Piece::Rotate() { rotation = (rotation + 1) % 4; }
 
 // Bổ sung triển khai cho phương thức UndoRotation
 void Piece::UndoRotation() {
-    rotation = (rotation + 3) % 4;
-    if (rotation < 0) {
-        rotation = 3;
-    }
+  rotation = (rotation + 3) % 4;
+  if (rotation < 0) {
+    rotation = 3;
+  }
 }
 
 void Piece::Move(int row, int col) {
@@ -62,10 +62,11 @@ void Piece::Draw(int offsetX, int offsetY) {
   Color pieceColor = darkGrey;
   std::vector<Color> cellColors = GetCellColors();
   if (id > 0 && id < (int)cellColors.size()) {
-      pieceColor = cellColors[id];
+    pieceColor = cellColors[id];
   }
-  for(const auto& item: tiles) {
-      DrawRectangle(item.col * cellSize + offsetX, item.row * cellSize + offsetY, cellSize - 1, cellSize - 1, pieceColor);
+  for (const auto &item : tiles) {
+    DrawRectangle(item.col * cellSize + offsetX, item.row * cellSize + offsetY,
+                  cellSize - 1, cellSize - 1, pieceColor);
   }
 }
 
@@ -84,7 +85,7 @@ LShape::LShape() {
   cells[0] = {{0, 2}, {1, 0}, {1, 1}, {1, 2}};
   cells[1] = {{0, 1}, {1, 1}, {2, 1}, {2, 2}};
   cells[2] = {{1, 0}, {1, 1}, {1, 2}, {2, 0}};
-  cells[3] = {{0, 1}, {1, 1}, {2, 0}, {2, 1}};
+  cells[3] = {{0, 0}, {0, 1}, {1, 1}, {2, 1}};
   Move(0, 3);
 }
 
@@ -141,4 +142,3 @@ OShape::OShape() {
   cells[3] = {{0, 1}, {0, 2}, {1, 1}, {1, 2}};
   Move(0, 4);
 }
-
