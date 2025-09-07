@@ -13,6 +13,7 @@ public:
   Game();
   ~Game();
   void Draw();
+  void Draw(Font font);
   bool IsValidPosition();
   void Update();
   void MovePieceDown();
@@ -25,6 +26,7 @@ private:
   bool gameOver;
   int score;
   Grid grid;
+  Piece currentBlock;
   Piece currentPiece;
   Piece nextPiece;
   void MovePieceLeft();

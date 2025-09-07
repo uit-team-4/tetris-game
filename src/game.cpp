@@ -26,11 +26,14 @@ Game::~Game()
     UnloadSound(clearSound);
     UnloadMusicStream(music);
     CloseAudioDevice();
+  currentBlock = Piece::GetRandomPiece();
+  score = 0;
 }
 
+void Game::Draw(Font font) { grid.Draw(font, score); }
 
-void Game::Draw() { 
-  grid.Draw(); 
+void Game::Draw() {
+  grid.Draw();
   currentPiece.Draw(11, 11);
   nextPiece.Draw(350, 250);
   // switch (nextPiece.id)
@@ -56,28 +59,20 @@ bool Game::IsValidPosition() {
   return true;
 }
 
-void Game::HandleInput() {
+void Game::Update() {
   int keyPressed = GetKeyPressed();
   switch (keyPressed) {
   case KEY_LEFT:
-  case 'A':
-    currentPiece.MoveLeft();
+    currentBlock.MoveLeft();
     break;
   case KEY_RIGHT:
-  case 'D':
-    currentPiece.MoveRight();
+    currentBlock.MoveRight();
     break;
   case KEY_DOWN:
-  case 'S':
-    currentPiece.MoveDown();
+    currentBlock.MoveDown();
     break;
   case KEY_UP:
-  case 'W':
-    PlaySound(rotateSound);
-    currentPiece.Rotate();
-    break;
-  case KEY_SPACE:
-    isPlaying = !isPlaying;
+    currentBlock.Rotate();
     break;
   }
 }
@@ -86,7 +81,7 @@ void Game::MovePieceDown() {
     return;
   }
   currentPiece.MoveDown();
-} 
+}
 void Game::MovePieceLeft(){}
 
 void Game::MovePieceRight(){}

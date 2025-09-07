@@ -24,6 +24,7 @@ int main() {
 
     BeginDrawing();
     ClearBackground(DARKGRAY);
+    game.Draw(font);
     DrawTextEx(font, "Score", {365, 15}, 38, 2, WHITE);
     DrawTextEx(font, "Next", {370, 175}, 38, 2, WHITE);
     game.Draw();
