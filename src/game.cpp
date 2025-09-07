@@ -8,9 +8,10 @@
 Game::Game() {
   grid = Grid();
   currentBlock = Piece::GetRandomPiece();
+  score = 0;
 }
 
-void Game::Draw() { grid.Draw(); }
+void Game::Draw(Font font) { grid.Draw(font, score); }
 
 bool Game::IsValidPosition() {
   std::vector<Position> tiles = currentBlock.GetCellPositions();

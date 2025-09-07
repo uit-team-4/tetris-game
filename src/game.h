@@ -10,13 +10,14 @@
 class Game {
 public:
   Game();
-  void Draw();
+  void Draw(Font font);
   bool IsValidPosition();
   void Update();
 
 private:
   Grid grid;
   Piece currentBlock;
+  int score;
 };
 
 #endif // TETRIS_GAME_GAME_H
