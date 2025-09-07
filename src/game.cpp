@@ -18,24 +18,22 @@ Game::Game() {
   PlayMusicStream(music);
   rotateSound = LoadSound("sounds/rotate.mp3");
   clearSound = LoadSound("sounds/clear.mp3");
-
 }
-Game::~Game()
-{
-    UnloadSound(rotateSound);
-    UnloadSound(clearSound);
-    UnloadMusicStream(music);
-    CloseAudioDevice();
+Game::~Game() {
+  UnloadSound(rotateSound);
+  UnloadSound(clearSound);
+  UnloadMusicStream(music);
+  CloseAudioDevice();
   currentBlock = Piece::GetRandomPiece();
   score = 0;
 }
 
-void Game::Draw(Font font) { grid.Draw(font, score); }
-
-void Game::Draw() {
-  grid.Draw();
+void Game::Draw(Font font) {
+  grid.Draw(font, score);
   currentPiece.Draw(11, 11);
   nextPiece.Draw(350, 250);
+  DrawTextEx(font, "Score", {365, 15}, 38, 2, WHITE);
+  DrawTextEx(font, "Next", {370, 175}, 38, 2, WHITE);
   // switch (nextPiece.id)
   // {
   // case 3:
@@ -82,16 +80,12 @@ void Game::MovePieceDown() {
   }
   currentPiece.MoveDown();
 }
-void Game::MovePieceLeft(){}
+void Game::MovePieceLeft() {}
 
-void Game::MovePieceRight(){}
-bool Game::IsPieceOutside(){}
-void Game::RotatePiece(){}
-void Game::LockPiece(){
-}
-bool Game::PieceFits(){
-  return false;
-}
-void Game::Reset(){
-}
-void Game::UpdateScore(int linesCleared, int moveDownPoints){}
+void Game::MovePieceRight() {}
+bool Game::IsPieceOutside() {}
+void Game::RotatePiece() {}
+void Game::LockPiece() {}
+bool Game::PieceFits() { return false; }
+void Game::Reset() {}
+void Game::UpdateScore(int linesCleared, int moveDownPoints) {}
