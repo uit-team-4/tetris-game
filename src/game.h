@@ -7,37 +7,43 @@
 #pragma once
 #include "grid.h"
 #include "piece.h"
+#include <vector>
 
 class Game {
 public:
-  Game();
-  ~Game();
-  void Draw(Font font);
-  bool IsValidPosition();
-  void Update();
-  void MovePieceDown();
-  void HandleInput();
-  Music music;
-  bool isPlaying;
+    Game();
+    ~Game();
+    void Draw(Font font);
+    void Update();
+    void HandleInput();
+    Music music;
 
 private:
-  bool gameOver;
-  int score;
-  Grid grid;
-  Piece currentBlock;
-  Piece currentPiece;
-  Piece nextPiece;
-  void MovePieceLeft();
-  void MovePieceRight();
-  bool IsPieceOutside();
-  void RotatePiece();
-  void LockPiece();
-  bool PieceFits();
-  void Reset();
-  void UpdateScore(int linesCleared, int moveDownPoints);
-  std::vector<Piece> pieces;
-  Sound rotateSound;
-  Sound clearSound;
+    void MovePieceDown();
+    void MovePieceLeft();
+    void MovePieceRight();
+    void RotatePiece();
+
+    bool IsValidPosition();
+    void LockPiece();
+    void Reset();
+    void UpdateScore(int linesCleared, int moveDownPoints);
+
+    void UpdateHighScores();
+
+    bool gameOver;
+    int score;
+    Grid grid;
+    Piece currentPiece;
+    Piece nextPiece;
+
+    Sound rotateSound;
+    Sound clearSound;
+
+    float fallTimer;
+    float fallInterval;
+
+    std::vector<int> highScores;
 };
 
-#endif // TETRIS_GAME_GAME_H
+#endif

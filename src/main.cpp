@@ -15,14 +15,10 @@ int main() {
 
   while (!WindowShouldClose()) {
     UpdateMusicStream(game.music);
-    game.Update();
-    if (game.isPlaying) {
-      game.MovePieceDown();
-    }
+    game.Update(); // Toàn bộ logic cập nhật game nằm trong hàm này
 
     BeginDrawing();
-    ClearBackground(DARKGRAY);
-
+    ClearBackground(darkGrey);
     game.Draw(font);
     EndDrawing();
   }

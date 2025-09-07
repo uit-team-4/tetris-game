@@ -10,66 +10,68 @@
 using namespace std;
 
 struct Position {
-  int row;
-  int col;
+    int row;
+    int col;
 };
 
 class Piece {
 public:
-  Piece();
-  int id;
-  int cellSize;
-  map<int, vector<Position>> cells;
-  static Piece GetRandomPiece();
-  void Rotate();
-  void Move(int row, int col);
-  void MoveLeft();
-  void MoveRight();
-  void MoveDown();
-  void Draw(int offsetX, int offsetY);
-  std::vector<Position> GetCellPositions();
+    Piece();
+    int id;
+    int cellSize;
+    map<int, vector<Position>> cells;
+    static Piece GetRandomPiece();
+    void Rotate();
+    void UndoRotation(); // Thêm phương thức để quay ngược lại
+    void Move(int row, int col);
+    void MoveLeft();
+    void MoveRight();
+    void MoveDown();
+    void Draw(int offsetX, int offsetY);
+    std::vector<Position> GetCellPositions();
 
 private:
-  int row;
-  int col;
-  int rotation;
-  int rowOffset;
-  int columnOffset;
+    int row;
+    int col;
+    int rotation;
+    int rowOffset;
+    int columnOffset;
 };
 
 class LShape : public Piece {
 public:
-  LShape();
+    LShape();
 };
 
 class JShape : public Piece {
 public:
-  JShape();
+    JShape();
 };
 
 class IShape : public Piece {
 public:
-  IShape();
+    IShape();
 };
 
 class TShape : public Piece {
 public:
-  TShape();
+    TShape();
 };
 
 class ZShape : public Piece {
 public:
-  ZShape();
+    ZShape();
 };
 
 class SShape : public Piece {
 public:
-  SShape();
+    SShape();
 };
 
 class OShape : public Piece {
 public:
-  OShape();
+    OShape();
 };
 
 #endif // TETRIS_GAME_PIECE_H
+

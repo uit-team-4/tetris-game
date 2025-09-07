@@ -7,9 +7,10 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_executable(tetris-game
         src/main.cpp
-        src/grid.cpp
         src/game.cpp
+        src/grid.cpp
         src/piece.cpp
+        src/colors.cpp
 )
 
 target_include_directories(tetris-game PRIVATE
