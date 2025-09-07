@@ -12,7 +12,6 @@ class Game {
 public:
   Game();
   ~Game();
-  void Draw();
   void Draw(Font font);
   bool IsValidPosition();
   void Update();
@@ -20,7 +19,6 @@ public:
   void HandleInput();
   Music music;
   bool isPlaying;
-
 
 private:
   bool gameOver;

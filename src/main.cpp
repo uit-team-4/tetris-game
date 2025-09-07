@@ -1,6 +1,6 @@
+#include "colors.h"
 #include "game.h"
 #include "raylib.h"
-#include "colors.h"
 #include <iostream>
 
 int main() {
@@ -14,20 +14,16 @@ int main() {
   Game game;
 
   while (!WindowShouldClose()) {
-    // game.Update();
-            UpdateMusicStream(game.music);
-        game.HandleInput();
-        if (game.isPlaying)
-        {
-            game.MovePieceDown();
-        }
+    UpdateMusicStream(game.music);
+    game.Update();
+    if (game.isPlaying) {
+      game.MovePieceDown();
+    }
 
     BeginDrawing();
     ClearBackground(DARKGRAY);
+
     game.Draw(font);
-    DrawTextEx(font, "Score", {365, 15}, 38, 2, WHITE);
-    DrawTextEx(font, "Next", {370, 175}, 38, 2, WHITE);
-    game.Draw();
     EndDrawing();
   }
 
