@@ -129,6 +129,30 @@ tetris-game/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tetris-game.dir/build.make CMakeFiles/tetris-game.dir/build
 .PHONY : tetris-game/fast
 
+src/game.o: src/game.cpp.o
+.PHONY : src/game.o
+
+# target to build an object file
+src/game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tetris-game.dir/build.make CMakeFiles/tetris-game.dir/src/game.cpp.o
+.PHONY : src/game.cpp.o
+
+src/game.i: src/game.cpp.i
+.PHONY : src/game.i
+
+# target to preprocess a source file
+src/game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tetris-game.dir/build.make CMakeFiles/tetris-game.dir/src/game.cpp.i
+.PHONY : src/game.cpp.i
+
+src/game.s: src/game.cpp.s
+.PHONY : src/game.s
+
+# target to generate assembly for a file
+src/game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tetris-game.dir/build.make CMakeFiles/tetris-game.dir/src/game.cpp.s
+.PHONY : src/game.cpp.s
+
 src/grid.o: src/grid.cpp.o
 .PHONY : src/grid.o
 
@@ -177,6 +201,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tetris-game.dir/build.make CMakeFiles/tetris-game.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/piece.o: src/piece.cpp.o
+.PHONY : src/piece.o
+
+# target to build an object file
+src/piece.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tetris-game.dir/build.make CMakeFiles/tetris-game.dir/src/piece.cpp.o
+.PHONY : src/piece.cpp.o
+
+src/piece.i: src/piece.cpp.i
+.PHONY : src/piece.i
+
+# target to preprocess a source file
+src/piece.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tetris-game.dir/build.make CMakeFiles/tetris-game.dir/src/piece.cpp.i
+.PHONY : src/piece.cpp.i
+
+src/piece.s: src/piece.cpp.s
+.PHONY : src/piece.s
+
+# target to generate assembly for a file
+src/piece.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tetris-game.dir/build.make CMakeFiles/tetris-game.dir/src/piece.cpp.s
+.PHONY : src/piece.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +234,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... tetris-game"
+	@echo "... src/game.o"
+	@echo "... src/game.i"
+	@echo "... src/game.s"
 	@echo "... src/grid.o"
 	@echo "... src/grid.i"
 	@echo "... src/grid.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/piece.o"
+	@echo "... src/piece.i"
+	@echo "... src/piece.s"
 .PHONY : help
 
 
