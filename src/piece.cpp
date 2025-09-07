@@ -1,10 +1,10 @@
 //
 // Created by Hiền on 27/8/25.
 //
-
+#pragma once
 #include "piece.h"
 #include "colors.h"
-#include <cstdlib>
+#include <random>
 
 // init Piece
 Piece::Piece() {

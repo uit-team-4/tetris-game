@@ -3,6 +3,7 @@
 //
 #ifndef TETRIS_GAME_PIECE_H
 #define TETRIS_GAME_PIECE_H
+#pragma once
 #include "map"
 #include "vector"
 
