@@ -201,6 +201,8 @@ void Game::UpdateScore(int linesCleared, int moveDownPoints) {
     score += 500;
     break;
   default:
+    if (linesCleared >= 4)
+      score += linesCleared * 150;
     break;
   }
   score += moveDownPoints;

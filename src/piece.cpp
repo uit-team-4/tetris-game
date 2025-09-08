@@ -4,6 +4,7 @@
 
 #include "piece.h"
 #include "colors.h"
+#include <random>
 
 // init Piece
 Piece::Piece() {
