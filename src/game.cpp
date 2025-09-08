@@ -16,10 +16,10 @@ Game::Game() {
   fallInterval = 0.5;
 
   InitAudioDevice();
-  music = LoadMusicStream("sounds/music.mp3");
+  music = LoadMusicStream("sounds/gameplay-music.mp3");
   PlayMusicStream(music);
-  rotateSound = LoadSound("sounds/rotate.mp3");
-  clearSound = LoadSound("sounds/clear.mp3");
+  rotateSound = LoadSound("sounds/gameplay-rotate.mp3");
+  clearSound = LoadSound("sounds/gameplay-clear-row.mp3");
 
   currentPiece = Piece::GetRandomPiece();
   nextPiece = Piece::GetRandomPiece();

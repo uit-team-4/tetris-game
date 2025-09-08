@@ -4,9 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/hienvu080791/CLionProjects/tetris-game/src -isystem /opt/homebrew/opt/raylib/include
+CXX_INCLUDES = -I/Users/mac/Desktop/tetris-game/src -isystem /usr/local/opt/raylib/include
 
-CXX_FLAGSarm64 = -std=gnu++17 -arch arm64 -I/opt/homebrew/Cellar/raylib/5.5/include
-
-CXX_FLAGS = -std=gnu++17 -arch arm64 -I/opt/homebrew/Cellar/raylib/5.5/include
+CXX_FLAGS = -std=gnu++17 -I/usr/local/Cellar/raylib/5.5/include
 
