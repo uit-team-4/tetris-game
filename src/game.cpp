@@ -18,9 +18,11 @@ Game::Game() {
   InitAudioDevice();
   music = LoadMusicStream("sounds/gameplay-music.mp3");
   PlayMusicStream(music);
+  SetMusicVolume(music, 0.3f); 
+
   rotateSound = LoadSound("sounds/gameplay-rotate.mp3");
   clearSound = LoadSound("sounds/gameplay-clear-row.mp3");
-
+  dropSound = LoadSound("sounds/drop.mp3");
   currentPiece = Piece::GetRandomPiece();
   nextPiece = Piece::GetRandomPiece();
 }
@@ -28,6 +30,7 @@ Game::Game() {
 Game::~Game() {
   UnloadSound(rotateSound);
   UnloadSound(clearSound);
+  UnloadSound(dropSound); 
   UnloadMusicStream(music);
   CloseAudioDevice();
 }
@@ -173,6 +176,7 @@ void Game::LockPiece() {
     PlaySound(clearSound);
     UpdateScore(rowsCleared, 0);
   }
+  PlaySound(dropSound);
   if (!IsValidPosition()) {
     gameOver = true;
     UpdateHighScores();

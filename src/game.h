@@ -39,6 +39,7 @@ private:
 
     Sound rotateSound;
     Sound clearSound;
+    Sound dropSound;
 
     float fallTimer;
     float fallInterval;
